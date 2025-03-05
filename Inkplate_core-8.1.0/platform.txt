@@ -1,5 +1,5 @@
-name=Inkplate Boards
-version=8.1.0
+name=ESP32 Arduino
+version=2.0.14
 
 tools.xtensa-esp32-elf-gcc.path={runtime.tools.xtensa-esp32-elf-gcc.path}
 tools.xtensa-esp32s2-elf-gcc.path={runtime.tools.xtensa-esp32s2-elf-gcc.path}
@@ -96,8 +96,8 @@ build.extra_flags.esp32c3=-DARDUINO_USB_MODE=1 -DARDUINO_USB_CDC_ON_BOOT={build.
 
 # EXPERIMENTAL feature: optimization flags
 #  - this is alpha and may be subject to change without notice
-compiler.optimization_flags=-O2
-compiler.optimization_flags.release=-O2
+compiler.optimization_flags=-Os
+compiler.optimization_flags.release=-Os
 compiler.optimization_flags.debug=-Og -g3
 
 # Compile Flags
